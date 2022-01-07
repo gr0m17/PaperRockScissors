@@ -3,18 +3,17 @@ const VideoWindow = (props) => {
   console.log(props);
 
   return (
-    <div>
+    <div className="">
       <video
-        width="100%"
+        className="videoBox"
         id="videoPlayerID"
         onEnded={props.endedHandler}
         autoPlay={"autoplay"}
         muted
         controls=""
         playsInline
-      >
-        <source src={VIDEO_ARRAY[1]} />
-      </video>
+        src={props.src || VIDEO_ARRAY[1]}
+      />
     </div>
   );
 };
