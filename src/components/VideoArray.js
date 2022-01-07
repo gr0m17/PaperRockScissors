@@ -15,7 +15,7 @@ import RPS_V13 from "../video/RPS_V13.mp4";
 import RPS_V14 from "../video/RPS_V14.mp4";
 import RPS_V15 from "../video/RPS_V15.mp4";
 import RPS_V16 from "../video/RPS_V16.mp4";
-import RPS_V17 from "../video/RPS_V00.mp4";
+import RPS_V17 from "../video/RPS_V17.mp4";
 
 const VIDEO_ARRAY = [
   RPS_V00,
