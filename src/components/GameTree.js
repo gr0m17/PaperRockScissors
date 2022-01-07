@@ -1,7 +1,7 @@
 export const GAME_DATA = {
   RPS_V00: {
     videoID: 0,
-    defaultNext: -1,
+    defaultNext: 0,
     branches: {
       b1: {
         name: "Play again!",
@@ -458,7 +458,7 @@ export const GAME_DATA = {
   },
   RPS_V17: {
     videoID: 17,
-    defaultNext: 18,
+    defaultNext: 17,
     branches: {
       b1: {
         name: "Play again!",

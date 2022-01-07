@@ -35,7 +35,7 @@ function App() {
     setCurrentVideoID(nextVideo);
     videoPlayer = document.getElementById("videoPlayerID");
     videoPlayer.src = VIDEO_ARRAY[nextVideo];
-    // setNextVideo(currentVideoData(nextVideo).defaultNext);
+    setNextVideo(currentVideoData(nextVideo).defaultNext);
   };
   const currentVideoData = (videoID) => {
     return [...Object.values(GAME_DATA)][videoID];
