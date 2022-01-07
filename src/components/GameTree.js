@@ -1,9 +1,19 @@
 export const GAME_DATA = {
   RPS_V00: {
     videoID: 0,
-    defaultNext: 1,
+    defaultNext: -1,
+    branches: {
+      b1: {
+        name: "Play again!",
+        videoID: 3,
+        buttonText: "Okay, I guess I'll play again.",
+        now: 1,
+        cpuOffset: function () {
+          return 0;
+        },
+      },
+    },
   },
-
   RPS_V01: {
     videoID: 1,
     defaultNext: 2,
@@ -11,6 +21,17 @@ export const GAME_DATA = {
   RPS_V02: {
     videoID: 2,
     defaultNext: 3,
+    branches: {
+      b1: {
+        name: "Skip Instructions",
+        videoID: 3,
+        buttonText: "Okay, I get it...",
+        now: 1,
+        cpuOffset: function () {
+          return 0;
+        },
+      },
+    },
   },
   RPS_V03: {
     videoID: 3,
@@ -68,7 +89,7 @@ export const GAME_DATA = {
       },
       b2: {
         name: "nah!",
-        videoID: 0,
+        videoID: 17,
         cpuOffset: function () {
           return 0;
         },
@@ -96,7 +117,7 @@ export const GAME_DATA = {
       },
       b2: {
         name: "nah!",
-        videoID: 0,
+        videoID: 17,
         cpuOffset: function () {
           return 0;
         },
@@ -124,7 +145,7 @@ export const GAME_DATA = {
       },
       b2: {
         name: "nah!",
-        videoID: 0,
+        videoID: 17,
         cpuOffset: function () {
           return 0;
         },
@@ -191,7 +212,7 @@ export const GAME_DATA = {
       },
       b2: {
         name: "nah!",
-        videoID: 0,
+        videoID: 17,
         cpuOffset: function () {
           return 0;
         },
@@ -219,7 +240,7 @@ export const GAME_DATA = {
       },
       b2: {
         name: "nah!",
-        videoID: 0,
+        videoID: 17,
         cpuOffset: function () {
           return 0;
         },
@@ -247,7 +268,7 @@ export const GAME_DATA = {
       },
       b2: {
         name: "nah!",
-        videoID: 0,
+        videoID: 17,
         cpuOffset: function () {
           return 0;
         },
@@ -314,7 +335,7 @@ export const GAME_DATA = {
       },
       b2: {
         name: "nah!",
-        videoID: 0,
+        videoID: 17,
         cpuOffset: function () {
           return 0;
         },
@@ -342,7 +363,7 @@ export const GAME_DATA = {
       },
       b2: {
         name: "nah!",
-        videoID: 0,
+        videoID: 17,
         cpuOffset: function () {
           return 0;
         },
@@ -370,7 +391,7 @@ export const GAME_DATA = {
       },
       b2: {
         name: "nah!",
-        videoID: 0,
+        videoID: 17,
         cpuOffset: function () {
           return 0;
         },
@@ -416,6 +437,36 @@ export const GAME_DATA = {
         buttonText: "Scissors!",
         specialHandler: function () {
           console.log("player clicked scissors!");
+        },
+      },
+    },
+  },
+  RPS_V16: {
+    videoID: 16,
+    defaultNext: 2,
+    branches: {
+      b1: {
+        name: "Skip Instructions",
+        videoID: 3,
+        buttonText: "Okay, I get it...",
+        now: 1,
+        cpuOffset: function () {
+          return 0;
+        },
+      },
+    },
+  },
+  RPS_V17: {
+    videoID: 17,
+    defaultNext: 18,
+    branches: {
+      b1: {
+        name: "Play again!",
+        videoID: 3,
+        buttonText: "Okay, I guess I'll play again.",
+        now: 1,
+        cpuOffset: function () {
+          return 0;
         },
       },
     },

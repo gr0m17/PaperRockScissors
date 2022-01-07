@@ -1,11 +1,7 @@
 const DataTree = (props) => {
-  let branchOffset;
-  console.log("props.setCurrentVideoID");
   return (
     <div>
-      <div>
-        <h2>the data tree:</h2>
-      </div>
+      <div>the data tree [and buttons]: </div>
       <div>
         {props.BRANCH_DATA &&
           console.log([...Object.values(props.BRANCH_DATA)])}
@@ -13,10 +9,13 @@ const DataTree = (props) => {
           [...Object.values(props.BRANCH_DATA)].map((branch) => {
             return (
               <div key={branch.videoID}>
-                {branch.name}, links to {+branch.videoID} + cpuOffset()]{" "}
+                {branch.name}, links to {+branch.videoID}
                 <button
                   onClick={() => {
-                    props.resetHandler(+branch.videoID + +branch.cpuOffset());
+                    props.resetHandler(
+                      +branch.videoID + +branch.cpuOffset(),
+                      branch.now
+                    );
                   }}
                 >
                   {branch.buttonText}
