@@ -2,7 +2,7 @@ import "./App.css";
 import { GAME_DATA } from "./components/GameTree";
 import DataTree from "./components/DataTree";
 import VideoWindow from "./components/VideoWindow";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import VIDEO_ARRAY from "./components/VideoArray";
 function App() {
   let videoPlayer;
@@ -14,7 +14,7 @@ function App() {
   const [currentVideoID, setCurrentVideoID] = useState(1);
   const [nextVideo, setNextVideo] = useState(2);
   // const currentVideoIDRef = useRef(currentVideoID);
-  const nextVideoRef = useRef(nextVideo);
+  // const nextVideoRef = useRef(nextVideo);
   const resetCurrentVideoHandler = (payload, now = 0) => {
     console.log("RESET THE CURRENT VIDEO: ", payload, " now?:", now);
     setNextVideo(payload);
@@ -23,7 +23,7 @@ function App() {
     if (now) {
       console.log("setting current Video id:", payload);
       setNextVideo(payload);
-      const reactStateRace = setTimeout(endedHandler, 1000);
+      const reactStateRace = setTimeout(endedHandler, 100);
     }
   };
   const videoPlay = () => {
@@ -34,7 +34,7 @@ function App() {
     console.log("next video = ", nextVideo);
     setCurrentVideoID(nextVideo);
     videoPlayer = document.getElementById("videoPlayerID");
-    videoPlayer.src = VIDEO_ARRAY[nextVideoRef.current];
+    videoPlayer.src = VIDEO_ARRAY[nextVideo];
     // setNextVideo(currentVideoData(nextVideo).defaultNext);
   };
   const currentVideoData = (videoID) => {
